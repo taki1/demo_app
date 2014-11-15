@@ -1,4 +1,6 @@
 class Project < ActiveRecord::Base
+	has_many :tasks
+	
 	validates :title, 
 	presence: { message: "入力してください" },
 	length: { minimum:2, maximum:10, message: "２文字以上１０文字以内で入力してください" }
