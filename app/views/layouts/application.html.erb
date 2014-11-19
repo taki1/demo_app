@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>DemoApp</title>
+  <title>DemoApp <%= yield(:title) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -14,9 +14,12 @@
 
 </br>
 <%= link_to "home", "/" %></br>
+<%= link_to "projects", projects_path %></br>
 <%= link_to "users", users_path %></br>
 <%= link_to "microposts", microposts_path %></br>
-<%= link_to "projects", projects_path %></br>
+<%= link_to "StaticPages_Home", "/static_pages/home" %></br>
+<%= link_to "StaticPages_Help", "/static_pages/help" %></br>
+<%= link_to "StaticPages_about", "/static_pages/about" %></br>
 
 
 </body>
