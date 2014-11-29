@@ -1,7 +1,18 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'
-  get 'static_pages/help'
-  get "static_pages/about"
+  get 'users/new'
+
+  #get 'static_pages/home'
+  #get 'static_pages/help'
+  #get "static_pages/about"
+  #get "static_pages/contact"
+  match '/home',    to: 'static_pages#home',    via: 'get'
+  match '/help',    to: 'static_pages#help',    via: 'get'
+  match '/about',   to: 'static_pages#about',   via: 'get'
+  match '/contact', to: 'static_pages#contact', via: 'get'
+  #home_path -> 'static_pages/home'
+  #help_path -> 'static_pages/help'
+  #about_path -> 'static_pages/about'
+  #contact_path -> 'static_pages/contact'
 
   resources :microposts
 

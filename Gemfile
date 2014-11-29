@@ -1,8 +1,11 @@
 source 'https://rubygems.org'
-
+ruby '2.1.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
+gem 'bootstrap-sass', '2.3.2.0'
+gem 'sprockets', '2.11.0'
+
 # Use sqlite3 as the database for Active Record
 group :development do
   gem 'sqlite3'
@@ -10,11 +13,13 @@ end
 #gem 'sqlite3', groups: %w(test development), require: false
 #gem 'pg', groups: %w(production), require: false
 group :production do
-  gem 'pg'
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
 end
-#group :development, :test do
+group :development, :test do
 #  gem 'sqlite3'
-#Send
+  gem 'rspec-rails', '2.13.1'
+end
 # Use SCSS for stylesheets
 gem 'sass-rails', '4.0.3'
 # Use Uglifier as compressor for JavaScript assets
