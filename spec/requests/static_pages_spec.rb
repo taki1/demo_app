@@ -1,4 +1,4 @@
-#require 'spec_helper'
+require 'spec_helper'
 
 describe "StaticPages" do
 =begin 
@@ -13,45 +13,45 @@ describe "StaticPages" do
 
   describe "Home page" do
 
-    it "should have the h1 'Demo App'" do
+    it "should have the h1 'Home'" do
       visit root_path
-      expect(page).to have_content('Demo App')
+      expect(page).to have_content('Home')
     end
 
     it "should have the base title" do
       visit root_path
-      expect(page).to have_title("Ruby on Rails Tutorial Demo App")
+      expect(page).to have_title("Demo App")
     end
 
     it "should not have a custom page title" do
       visit root_path
-      expect(page).not_to have_title('| Home')
+      expect(page).not_to have_title('Home')
     end
   end
 
   describe "Help page" do
 
-    it "should have the h1 'Help'" do
+    it "should have the h1 'help'" do
       visit help_path
-      expect(page).to have_content('Help')
+      expect(page).to have_content('help')
     end
 
-    it "should have the title 'Help'" do
+    it "should have the title 'help'" do
       visit help_path
-      expect(page).to have_title("Ruby on Rails Tutorial Sample App | Help")
+      expect(page).to have_title("Demo App | help")
     end
   end
 
   describe "About page" do
 
-    it "should have the h1 'About Us'" do
+    it "should have the h1 'about'" do
       visit about_path
-      expect(page).to have_content('About Us')
+      expect(page).to have_content('about')
     end
 
-    it "should have the title 'About Us'" do
+    it "should have the title 'about'" do
       visit about_path
-      expect(page).to have_title("Ruby on Rails Tutorial Sample App | About Us")
+      expect(page).to have_title("Demo App | about")
     end
   end
 
@@ -64,7 +64,7 @@ describe "StaticPages" do
 
     it "should have the title 'Contact'" do
       visit contact_path
-      expect(page).to have_title("Ruby on Rails Tutorial Sample App | Contact")
+      expect(page).to have_title("Demo App | Contact")
     end
   end
 
