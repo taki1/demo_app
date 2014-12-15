@@ -10,6 +10,9 @@ gem 'sprockets', '2.11.0'
 #gem 'sprockets-sass'
 gem 'bcrypt-ruby', '3.1.2'
 gem "shoulda-matchers", "~> 2.6.0"
+gem 'faker', '1.4.3'
+gem 'will_paginate', '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
 
 # Use sqlite3 as the database for Active Record
 group :development do
@@ -23,7 +26,7 @@ group :production do
 end
 group :development, :test do
 #  gem 'sqlite3'
-  gem 'rspec-rails', '2.13.1'
+  gem 'rspec-rails', '2.14.0'
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
   gem 'factory_girl_rails', '4.2.1'
